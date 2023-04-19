@@ -13,7 +13,7 @@ import { Modal } from 'components/Modal/Modal';
 import { ImageGallery } from 'components/ImageGallery/ImageGallery';
 
 export class App extends Component {
-  static = {
+  state = {
     isShown: false,
     page: 1,
     loader: false,
@@ -102,14 +102,17 @@ export class App extends Component {
         <Searchbar onSubmit={this.formSubmit} />
         {loader && (
           <Grid
-            height="80"
-            width="80"
-            color="#4fa94d"
+            height="120"
+            width="120"
+            color="#303f9f"
             ariaLabel="grid-loading"
             radius="12.5"
             wrapperStyle={{}}
             wrapperClass=""
             visible={true}
+            // align-items="center"
+            // justify-content="center"
+            // margin="0 auto"
           />
         )}
 
@@ -118,7 +121,7 @@ export class App extends Component {
         )}
 
         {this.state.isShown && (
-          <Modal urlItem={modalUrl} toggleModal={this.toggleModal} />
+          <Modal urlImage={modalUrl} toggleModal={this.toggleModal} />
         )}
 
         {result.length > 0 && result.length < total && !loader && (

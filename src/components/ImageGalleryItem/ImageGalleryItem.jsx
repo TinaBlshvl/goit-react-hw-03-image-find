@@ -15,9 +15,9 @@ export const ImageGalleryItem = ({ item }) => {
   );
 };
 
-// ImageGalleryItem.PropTypes = {
-//   item: PropTypes.shape({
-//     webformatURL: PropTypes.string.isRequired,
-//     largeImageURL: PropTypes.string.isRequired,
-//   }).isRequired,
-// };
+ImageGalleryItem.propTypes = {
+  item: PropTypes.shape({
+    webformatURL: PropTypes.string.isRequired,
+    largeImageURL: PropTypes.string.isRequired,
+  }).isRequired,
+};
